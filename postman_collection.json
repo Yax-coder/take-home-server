@@ -21,12 +21,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/users/register",
-					"protocol": "http",
+					"raw": "{{baseURL}}/api/users/register",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"users",
@@ -51,12 +49,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/users/login",
-					"protocol": "http",
+					"raw": "{{baseURL}}/api/users/login",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"users",
@@ -72,12 +68,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/users/find/66353f94cb2ae5089d66330d",
-					"protocol": "http",
+					"raw": "{{baseURL}}/api/users/find/66353f94cb2ae5089d66330d",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"users",
@@ -94,14 +88,11 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/users",
-					"protocol": "http",
+					"raw": "{{baseURL}}api/users",
 					"host": [
-						"localhost"
+						"{{baseURL}}api"
 					],
-					"port": "5000",
 					"path": [
-						"api",
 						"users"
 					]
 				}
@@ -123,12 +114,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/messages/6636913ec01bd217dedfce47",
-					"protocol": "http",
+					"raw": "{{baseURL}}/api/messages/6636913ec01bd217dedfce47",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"messages",
@@ -144,17 +133,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/messages/receiver/66364518afa977a98e1177f0",
-					"protocol": "http",
+					"raw": "{{baseURL}}api/messages/receiver/663ba1dafe669712341e9824",
 					"host": [
-						"localhost"
+						"{{baseURL}}api"
 					],
-					"port": "5000",
 					"path": [
-						"api",
 						"messages",
 						"receiver",
-						"66364518afa977a98e1177f0"
+						"663ba1dafe669712341e9824"
 					]
 				}
 			},
@@ -167,20 +153,16 @@
 				"header": [
 					{
 						"key": "rec",
-						"value": "",
-						"uuid": "e66dd102-3ef9-40f5-9643-b71b3701c28f",
-						"disabled": true
+						"value": ""
 					},
 					{
 						"key": "receiverId",
-						"value": "66353f94cb2ae5089d66330d",
-						"uuid": "2252ea54-4ab0-4c8a-9237-9d88fe726188",
-						"disabled": true
+						"value": "66353f94cb2ae5089d66330d"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"sender\": \"66353f94cb2ae5089d66330d\",\n    \"receiver\": \"6638212be71dc55a4a5f392d\",\n    \"subject\": \"Hi Xander\",\n    \"isRead\": false,\n    \"content\": \"Thinking of you! Hope you're doing well.\"\n}",
+					"raw": "{\n    \"sender\": \"66353f94cb2ae5089d66330d\",\n    \"receiver\": \"663bb6a9a6b9a7c2ef517996\",\n    \"subject\": \"Hi Yahya\",\n    \"isRead\": false,\n    \"content\": \"how are you doing.\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -209,12 +191,10 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/messages/sender/66364518afa977a98e1177f0",
-					"protocol": "http",
+					"raw": "{{baseURL}}/api/messages/sender/66364518afa977a98e1177f0",
 					"host": [
-						"localhost"
+						"{{baseURL}}"
 					],
-					"port": "5000",
 					"path": [
 						"api",
 						"messages",
@@ -226,10 +206,32 @@
 			"response": []
 		}
 	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
 	"variable": [
 		{
-			"key": "baseUrl",
-			"value": "baseUrl"
+			"key": "baseURL",
+			"value": "https://take-home-server.onrender.com/"
 		}
 	]
 }
