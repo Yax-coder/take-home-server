@@ -11,5 +11,11 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.3",
     "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
   }
 }
