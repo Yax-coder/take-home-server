@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "5dcaee23-3bde-423f-8fc9-9e937fd5c75b",
+		"name": "take-home",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8866687"
+	},
+	"item": [
+		{
+			"name": "Register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Yahya Ahmad\",\n    \"email\": \"yahay.me@gmail.com\",\n    \"password\": \"password12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"yahay.me@gmail.com\",\n    \"password\": \"password12345\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Single User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users/find/66353f94cb2ae5089d66330d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users",
+						"find",
+						"66353f94cb2ae5089d66330d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Message",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"isRead\": false\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/messages/6636913ec01bd217dedfce47",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"6636913ec01bd217dedfce47"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Receiver Message",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/messages/receiver/66364518afa977a98e1177f0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"receiver",
+						"66364518afa977a98e1177f0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "rec",
+						"value": "",
+						"uuid": "e66dd102-3ef9-40f5-9643-b71b3701c28f",
+						"disabled": true
+					},
+					{
+						"key": "receiverId",
+						"value": "66353f94cb2ae5089d66330d",
+						"uuid": "2252ea54-4ab0-4c8a-9237-9d88fe726188",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender\": \"66353f94cb2ae5089d66330d\",\n    \"receiver\": \"6638212be71dc55a4a5f392d\",\n    \"subject\": \"Hi Xander\",\n    \"isRead\": false,\n    \"content\": \"Thinking of you! Hope you're doing well.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/messages/send",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Sender Messages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/messages/sender/66364518afa977a98e1177f0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"messages",
+						"sender",
+						"66364518afa977a98e1177f0"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "baseUrl"
+		}
+	]
+}
