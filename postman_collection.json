@@ -231,7 +231,7 @@
 	"variable": [
 		{
 			"key": "baseURL",
-			"value": "https://take-home-server.onrender.com/"
+			"value": "https://take-home-server.onrender.com"
 		}
 	]
 }
